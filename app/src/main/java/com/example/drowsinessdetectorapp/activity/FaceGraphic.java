@@ -1,3 +1,4 @@
+
 package com.example.drowsinessdetectorapp.activity;
 
 import android.annotation.SuppressLint;
@@ -146,6 +147,12 @@ public class FaceGraphic extends GraphicOverlay.Graphic {
                     if (!isYawnAlertOn) isDrowsyAlertOn = true;
                     EventBus.getDefault().post(new AllEyesClosedEvent());
                 }
+
+
+
+
+
+
             } else if (!leftClosed && !rightClosed) {
                 if (eyeFrameCount >= REQ_EYE_FPS && isDrowsyAlertOn) {
                     handler.postDelayed(new Runnable() {
